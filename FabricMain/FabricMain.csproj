@@ -1,0 +1,512 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CF922C79-9D6B-424F-89D5-295C53894001}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FabricMain</RootNamespace>
+    <AssemblyName>FabricMain</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\FabricCheck\Delopy\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D34173F9E1DF83722BCB26EF515E31CE21E07B70</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>FabricMain_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v22.2" />
+    <Reference Include="DevExpress.Data.Desktop.v22.2" />
+    <Reference Include="DevExpress.Data.v22.2" />
+    <Reference Include="DevExpress.Images.v22.2, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v22.2" />
+    <Reference Include="DevExpress.XtraBars.v22.2" />
+    <Reference Include="DevExpress.Sparkline.v22.2.Core" />
+    <Reference Include="DevExpress.XtraEditors.v22.2" />
+    <Reference Include="DevExpress.Printing.v22.2.Core" />
+    <Reference Include="DevExpress.Drawing.v22.2" />
+    <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\lib\net461\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=8.0.0.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.8.0.0-preview.4\lib\netstandard2.0\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.7.0.0\lib\net462\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.6.0.0\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.7.0.2\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Channels, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Channels.7.0.0\lib\net462\System.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Reporting, Version=16.2.22.914, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" />
+    <Reference Include="Telerik.ReportViewer.WinForms, Version=16.2.22.914, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseData\ChineseColorNameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseData\ChineseColorNameForm.Designer.cs">
+      <DependentUpon>ChineseColorNameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseData\ClothClassificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseData\ClothClassificationForm.Designer.cs">
+      <DependentUpon>ClothClassificationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseData\CompanyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseData\CompanyForm.Designer.cs">
+      <DependentUpon>CompanyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseData\CurrencyInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseData\CurrencyInfoForm.Designer.cs">
+      <DependentUpon>CurrencyInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseData\DefectiveItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseData\DefectiveItemForm.Designer.cs">
+      <DependentUpon>DefectiveItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseData\DetailLinesDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseData\DetailLinesDataForm.Designer.cs">
+      <DependentUpon>DetailLinesDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseData\EmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseData\EmployeeForm.Designer.cs">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseData\FabricSystemConfigure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseData\FabricSystemConfigure.Designer.cs">
+      <DependentUpon>FabricSystemConfigure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseData\LevelCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseData\LevelCategoryForm.Designer.cs">
+      <DependentUpon>LevelCategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseData\MachineStationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseData\MachineStationForm.Designer.cs">
+      <DependentUpon>MachineStationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseData\PartnerInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseData\PartnerInfoForm.Designer.cs">
+      <DependentUpon>PartnerInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseData\PasswordPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseData\PasswordPrompt.Designer.cs">
+      <DependentUpon>PasswordPrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseData\PaymentTermForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseData\PaymentTermForm.Designer.cs">
+      <DependentUpon>PaymentTermForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseData\PickingLabelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseData\PickingLabelForm.Designer.cs">
+      <DependentUpon>PickingLabelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseData\ProductBasicInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseData\ProductBasicInfoForm.Designer.cs">
+      <DependentUpon>ProductBasicInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseData\RequestItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseData\RequestItemForm.Designer.cs">
+      <DependentUpon>RequestItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseData\SingleEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseData\SingleEmployee.Designer.cs">
+      <DependentUpon>SingleEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseData\TubeCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseData\TubeCategoryForm.Designer.cs">
+      <DependentUpon>TubeCategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckMain.Designer.cs">
+      <DependentUpon>CheckMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="loginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginForm.Designer.cs">
+      <DependentUpon>loginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseData\SaleOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseData\SaleOrderForm.Designer.cs">
+      <DependentUpon>SaleOrderForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BaseData\ChineseColorNameForm.resx">
+      <DependentUpon>ChineseColorNameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseData\ClothClassificationForm.resx">
+      <DependentUpon>ClothClassificationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseData\CompanyForm.resx">
+      <DependentUpon>CompanyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseData\CurrencyInfoForm.resx">
+      <DependentUpon>CurrencyInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseData\DefectiveItemForm.resx">
+      <DependentUpon>DefectiveItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseData\DetailLinesDataForm.resx">
+      <DependentUpon>DetailLinesDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseData\EmployeeForm.resx">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseData\FabricSystemConfigure.resx">
+      <DependentUpon>FabricSystemConfigure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseData\LevelCategoryForm.resx">
+      <DependentUpon>LevelCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseData\MachineStationForm.resx">
+      <DependentUpon>MachineStationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseData\PartnerInfoForm.resx">
+      <DependentUpon>PartnerInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseData\PasswordPrompt.resx">
+      <DependentUpon>PasswordPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseData\PaymentTermForm.resx">
+      <DependentUpon>PaymentTermForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseData\PickingLabelForm.resx">
+      <DependentUpon>PickingLabelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseData\ProductBasicInfoForm.resx">
+      <DependentUpon>ProductBasicInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseData\RequestItemForm.resx">
+      <DependentUpon>RequestItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseData\SaleOrderForm.resx">
+      <DependentUpon>SaleOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseData\SingleEmployee.resx">
+      <DependentUpon>SingleEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseData\TubeCategoryForm.resx">
+      <DependentUpon>TubeCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckMain.resx">
+      <DependentUpon>CheckMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginForm.resx">
+      <DependentUpon>loginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8.1 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginBackgroud.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FabricBLL\FabricBLL.csproj">
+      <Project>{419fa7de-2fdf-4991-9b25-a54d82b91eff}</Project>
+      <Name>FabricBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FabricCommon\FabricCommon.csproj">
+      <Project>{9DAE5B2B-9D47-4076-BF27-FFFF8A24799A}</Project>
+      <Name>FabricCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FabricModel\FabricModel.csproj">
+      <Project>{97c3aaaf-0250-4923-be9f-207ef25d17d9}</Project>
+      <Name>FabricModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleteitem_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleteitem_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newdoc_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newdoc_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_32x323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_16x163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleteitem_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleteitem_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleteitem_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleteitem_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleteitem_32x323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleteitem_16x163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleteitem_32x324.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleteitem_16x164.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_32x323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_16x163.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此專案參考這部電腦上所缺少的 NuGet 套件。請啟用 NuGet 套件還原，以下載該套件。如需詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的檔案是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
